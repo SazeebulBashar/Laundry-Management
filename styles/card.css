@@ -1,0 +1,45 @@
+.card{
+    box-shadow: 10px 10px 15px rgb(1, 79, 85);
+    /* margin: 20px; */
+    background-color: #64CCC5;
+    border-radius:20px;
+    padding: 20px;
+    border: 2px solid rgb(210, 246, 246);
+    
+}
+
+
+.card-title{
+    color: white;
+}
+.card-btn{
+    background-color: rgb(22, 160, 153);
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card-btn:hover{
+    background-color: rgb(4, 94, 94);
+    color: whitesmoke;
+    border: rgb(0, 255, 238);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.price{
+    color: white;
+    font-weight: bold;
+}
+.card-img-top{
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+    padding: 7px;
+    border-radius: 20px;
+}

@@ -1,0 +1,86 @@
+body {
+    background-color: #F0F0F0;
+}
+
+.rb {
+    border-radius: 10px;
+}
+
+.b {
+    border: 2px solid red;
+}
+
+.profile {
+    background-color: rgb(13, 65, 198);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px !important;
+    font-size: 1.2rem !important;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+}
+
+.round {
+    border-radius: 50%;
+    font-size: medium;
+    font-weight: bold;
+    height: 40px;
+    width: auto;
+}
+
+.icon {
+    margin-left: 10px !important;
+}
+
+#logo-title {
+    font-size: 1.8rem;
+    color: rgb(10, 5, 255);
+    font-weight: bolder;
+    font-family: serif;
+    font-style: italic;
+}
+
+#logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+
+.carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    height: 75vh;
+    border-radius: 20px;
+    
+}
+.carousel-caption{
+    color: rgb(255, 0, 0);
+    font-size: 2.5rem;
+    font-family: Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.admin{
+    background-color: rgb(122, 3, 3);
+    padding : 9px;
+    border-radius: 20px;
+    margin-left: 10px;
+    border: 1px solid rgb(2, 54, 85);
+}
+.login-logout{
+    background-color: rgb(16, 231, 217);
+    padding : 9px;
+    border-radius: 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 1px solid rgb(2, 54, 85);
+}

@@ -1,0 +1,31 @@
+body{
+    background-color: #F0F0F0;
+}
+
+.b{
+   border: 1px solid rgb(230, 243, 54); 
+
+}
+
+button a{
+    text-decoration: none;
+    color:white;
+}
+
+button a:hover{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
+.extra{
+    padding:70px;
+
+}
+.service-tag{
+    color: rgb(4, 94, 94);
+    font-size: 3rem;
+    font-style: italic;
+}
+.card-text{
+    color: rgb(4, 94, 94);
+}
