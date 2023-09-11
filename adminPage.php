@@ -14,7 +14,7 @@
         <div class="text-center">
             <h1>Welcome Bashar</h1>
         </div>
-        <h3>This are the running orders</h3>
+        <h3>These are the running orders</h3>
 
         <?php
         require_once ("dbconnection.php");

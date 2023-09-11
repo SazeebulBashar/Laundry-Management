@@ -46,7 +46,7 @@ if (!isset($_SESSION["user"])) {
 
                         <?php
                         if (isset($_SESSION["user"])) {
-                           echo "<a href='logout.php' class='btn btn-warning'> Logout </a>";
+                           echo "<a href='logout.php' class='nav-link login-logout'> Logout </a>";
                    
                            echo  "<button type='button' class='btn btn-primary position-relative icon round'>"
                            . strtoupper($_SESSION["name"][0]) . strtoupper($_SESSION["name"][-1]) . "<span class='position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle'>

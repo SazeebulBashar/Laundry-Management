@@ -46,6 +46,16 @@ CREATE TABLE `services` (
   `price` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+
+
+INSERT INTO `services` (`s_id`, `title`, `description`, `price`) VALUES
+(1, 'Regular wash and Ironing', 'Stater Package. Provide services starting from washing your clothes to ironing and pressing.', 9),
+(2, 'Wash and Fold Service', 'Great service at cheap Price. We take your dirty laundry, and wash, dry, fold, and package it for you.', 16),
+(3, 'Dry Cleaning', 'Offer dry cleaning services for delicate or special-care garments that cannot be machine washed.', 19),
+(5, 'Ironing and Pressing', 'Provide ironing and pressing services to ensure your clothing is wrinkle-free and well-presented.', 12),
+(6, 'Stain Removal', 'Specialize in stain removal techniques to tackle tough stains and maintain the quality of clothing.', 30),
+(7, 'Express Service', 'Offer faster turnaround times for you who need their laundry done urgently.', 39);
+
 -- --------------------------------------------------------
 
 --
