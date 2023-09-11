@@ -34,7 +34,7 @@ if (!isset($_SESSION["user"])) {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="index.php">Home</a>
                         <a class="nav-link" href="services.php">Services</a>

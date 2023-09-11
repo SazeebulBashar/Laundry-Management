@@ -32,7 +32,7 @@ $_SESSION["url"] = $_SERVER['REQUEST_URI'];
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="index.php">Home</a>
                         <a class="nav-link" href="services.php">Services</a>
@@ -72,7 +72,7 @@ $_SESSION["url"] = $_SERVER['REQUEST_URI'];
     <h1 class="text-center service-tag">Get The best Laundry Services in the Town.</h1>
     <div class="container d-flex justify-content-center">
         <div class="extra">
-        <div class='row row-cols-2 row-cols-md-2 g-4 '>
+        <div class='row row-cols-1 row-cols-md-2 g-4 '>
 
             <?php
 require_once "dbconnection.php";
