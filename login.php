@@ -24,6 +24,7 @@ if (isset($_SESSION["user"])) {
         body{
             background-image:  url("./images/3.jpg");
             background-size:cover;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
