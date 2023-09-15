@@ -49,6 +49,9 @@ if (isset($_SESSION["user"])) {
                     if (isset($_SESSION["url"])){
                     header("Location: " . $_SESSION['url']);
                     }
+                    else{
+                        header("Location: index.php");
+                    }
                     die();
                 }else{
                     echo "<div class='alert alert-danger'>Password does not match</div>";

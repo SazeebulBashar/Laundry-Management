@@ -40,8 +40,8 @@ if (!isset($_SESSION["user"])) {
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="index.php">Home</a>
                         <a class="nav-link" href="services.php">Services</a>
-                        <a class="nav-link" href="#">Pricing</a>
-                        <a class="nav-link" href="#">About</a>
+                        
+                        <a class="nav-link" href="about.php">About</a>
 
 
                         <?php
@@ -115,8 +115,9 @@ if (!isset($_SESSION["user"])) {
     $row = mysqli_fetch_assoc($result);
     $user_id = $row['id'];
     $service_id = $_GET['s_id'];
+    $qty = $_GET['qty'];
 
-    $sql = "INSERT INTO running_orders (service_id, user_id) VALUES ('$service_id' , '$user_id'); ";
+    $sql = "INSERT INTO running_orders (service_id, user_id, qty) VALUES ('$service_id' , '$user_id','$qty'); ";
 
     mysqli_query($conn,$sql);
 

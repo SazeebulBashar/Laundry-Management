@@ -1,24 +1,28 @@
 <?php
 session_start();
-$_SESSION["url"] = $_SERVER['REQUEST_URI'];
+if (!isset($_SESSION["user"])) {
+//    header("Location: login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/card.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="./styles/navbar.css">
-    <link rel="stylesheet" href="./styles/services.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    
+    <title>Happy Laundry</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
 </head>
 
 <body>
-    <!-- -------------------------------------- Nav Section ------------------------------------------- -->
+    <!-- ----------------------------------------------------navbar-------------------------------------------------- -->
     <div class="container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-container">
             <div class="container-fluid">
@@ -36,7 +40,6 @@ $_SESSION["url"] = $_SERVER['REQUEST_URI'];
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="index.php">Home</a>
                         <a class="nav-link" href="services.php">Services</a>
-                    
                         <a class="nav-link" href="about.php">About</a>
 
 
@@ -65,48 +68,42 @@ $_SESSION["url"] = $_SERVER['REQUEST_URI'];
         </nav>
     </div>
 
+    <!-- ---------------------------------------------------------About Section---------------------------------------------------- -->
 
-
-    <!-- ------------------------------------------- Service Section -------------------------------------------------- -->
-
-    <h1 class="text-center service-tag">Get The best Laundry Services in the Town.</h1>
-    <div class="container d-flex justify-content-center">
-        <div class="extra">
-        <div class='row row-cols-1 row-cols-md-2 g-4 '>
-
-            <?php
-require_once "dbconnection.php";
-
-$sql = "SELECT * FROM services";
-
-$result = mysqli_query($conn, $sql);
-
-while($row = mysqli_fetch_array($result)) {
-    
-    echo "<div class='col'>
-        <div class='card h-70'>
-            <img src='./images/services/". $row['img_url']. "' class='card-img-top' alt='Express Delivery. Get Ultra Fast Delevery'>
-            <div class='card-body'>
-                <h5 class='card-title text-center'>" .$row['title']. "</h5>
-                <p class='card-text'>" .$row['description']. "</p>
-                <div class='text-center'>
-                    <h4 class='price'>$" .$row['price']. "</h4>
-                <button class='card-btn btn-primary'><a href='orderPage.php?id=". $row['s_id']. "'". ">Book Now</a> </button>
-                </div>
+    <div class="container about-container">
+    <div class="about-section">
+            <h1 class="text-center">About Us</h1>
+            <p>Welcome to Your Laundry Service!</p>
+            <p>At Your Laundry Service, we are dedicated to providing top-notch laundry solutions to our customers. With years of experience in the industry, we have become a trusted name in the world of laundry services.</p>
+            <p>Our Mission:</p>
+            <ul>
+                <li>Deliver clean and fresh laundry on time, every time.</li>
+                <li>Offer competitive pricing and convenient pickup/delivery options.</li>
+                <li>Prioritize customer satisfaction and convenience above all else.</li>
+            </ul>
+            <p>Why Choose Us:</p>
+            <ul>
+                <li>Experienced and professional staff.</li>
+                <li>State-of-the-art laundry facilities.</li>
+                <li>Eco-friendly and efficient laundry practices.</li>
+                <li>Convenient online booking and tracking.</li>
+            </ul>
+            <p>We value your trust and look forward to serving you with the best laundry services in town.</p>
+            
+            <!-- Embed Google Map -->
+            <div class="google-map text-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.406207228904!2d90.42089117284662!3d23.76854524093341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7892dcf0001%3A0x853ad729be4edc71!2sEast%20West%20University!5e0!3m2!1sen!2sbd!4v1694709236194!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="quote text-center">
+                "Laundry is our passion, and customer satisfaction is our goal."
             </div>
         </div>
+        <div class="divider"></div>
     </div>
-";
-
-}
-
-
-$conn->close();
-
-?>
-            </div>
-        </div>
     </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </body>
 
