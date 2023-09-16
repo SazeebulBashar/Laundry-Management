@@ -35,12 +35,12 @@ if (!isset($_SESSION["user"])) {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="index.php">Home</a>
                         <a class="nav-link" href="services.php">Services</a>
-                        <a class="nav-link" href="#">Pricing</a>
-                        <a class="nav-link" href="#">About</a>
+
+                        <a class="nav-link" href="about.php">About</a>
 
 
                         <?php
@@ -77,7 +77,7 @@ $sql = "SELECT * FROM services WHERE s_id = '$id';";
 
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
-$conn->close();
+mysqli_close($conn);
 
 ?>
     <div class="container">
@@ -96,7 +96,8 @@ $conn->close();
                         <div class="cart_items">
                             <ul class="cart_list">
                                 <li class="cart_item clearfix">
-                                    <div class="cart_item_image"><!--<img src="https://i.imgur.com/qqBRWD5.jpg" alt="">-->
+                                    <div class="cart_item_image"><img
+                                            src="./images/services/<?php echo $row['img_url']; ?>" alt="">
                                     </div>
                                     <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
                                         <div class="cart_item_name cart_info_col">
@@ -106,12 +107,20 @@ $conn->close();
 
                                         <div class="cart_item_quantity cart_info_col">
                                             <div class="cart_item_title">Quantity</div>
-                                            <div class="cart_item_text" id='qty'>1</div>
+                                            <!-- <div class="cart_item_text" id='qty'>1</div> -->
+                                            <div class="cart_item_text">
+                                            <form method="post" action="">
+                                                <input name="quantity" type="number" value="1" min="1" id='qty' onchange="run()">
+                                            </form>
+                                            </div>
+                                            
+                                            
                                         </div>
 
                                         <div class="cart_item_price cart_info_col align-items-center">
                                             <div class="cart_item_title">Price</div>
-                                            <div class="cart_item_text">$<span id='price'><?php echo $row['price']; ?></span></div>
+                                            <div class="cart_item_text"><span
+                                                    id='price'><?php echo $row['price']; ?></span></div>
                                         </div>
 
                                         <div class="cart_item_total cart_info_col">
@@ -128,9 +137,14 @@ $conn->close();
                                 <div class="order_total_amount" id='orderTotal'></div>
                             </div>
                         </div>
+                        <?php
+                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $qty = $_POST["quantity"];
+                         }
+                        ?>
                         <div class="cart_buttons">
-                            <button type="button" class="button cart_button_checkout" id="place-order"> 
-                                <a href='orderConfirmed.php?s_id=<?php echo $id; ?>'>Place Order</a>
+                            <button type="button" class="button cart_button_checkout" id="place-order">
+                                <a href='orderConfirmed.php?s_id=<?php echo $id. "&qty=". $qty; ?>'>Place Order</a>
                             </button>
                         </div>
                     </div>
@@ -146,12 +160,19 @@ $conn->close();
 
     <script>
         const price = document.getElementById("price").innerHTML;
-        const qty = document.getElementById("qty").innerHTML;
+        const qty = document.getElementById("qty").value;
         const totalPrice = price * qty;
         document.getElementById("totalPrice").innerHTML = "$" + totalPrice;
         document.getElementById("orderTotal").innerHTML = "$" + totalPrice;
 
-    
+    function run(){
+        console.log("Running");
+        const price = document.getElementById("price").innerHTML;
+        const qty = document.getElementById("qty").value;
+        const totalPrice = price * qty;
+        document.getElementById("totalPrice").innerHTML = "$" + totalPrice;
+        document.getElementById("orderTotal").innerHTML = "$" + totalPrice;
+        }
     </script>
 </body>
 
