@@ -21,12 +21,13 @@ if (isset($_SESSION['admin'])){
     <link rel="stylesheet" href="./styles/login.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
-
+    <link rel="stylesheet" href="styles/adminLogin.css">
     <style>
         body{
             background-image:  url("./images/4.jpg");
             background-size:cover;
         }
+       
     </style>
 </head>
 <body>

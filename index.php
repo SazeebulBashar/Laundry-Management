@@ -34,12 +34,12 @@ if (!isset($_SESSION["user"])) {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="index.php">Home</a>
                         <a class="nav-link" href="services.php">Services</a>
-                        <a class="nav-link" href="#">Pricing</a>
-                        <a class="nav-link" href="#">About</a>
+                        
+                        <a class="nav-link" href="about.php">About</a>
 
 
                         <?php
@@ -81,24 +81,24 @@ if (!isset($_SESSION["user"])) {
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./images/carousel/carousel-5.jpg" class="d-block w-100" alt="...">
+                    <img src="./images/carousel/1.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h1>The Best Service in the Town.</h1>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <!-- <p>Some representative placeholder content for the first slide.</p> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/carousel/express_Delivery.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Get The Fastest Delivery Service Experience</h1>
+                        <!-- <p>Some representative placeholder content for the second slide.</p> -->
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="./images/carousel/carousel-2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h1>Get The Fastest Delivery Service Experience</h1>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/carousel/carousel-3.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
                         <h1>Even Better Washing and Cleaning Technique</h1>
-                        <p>Some representative placeholder content for the third slide.</p>
+                        <!-- <p>Some representative placeholder content for the third slide.</p> -->
                     </div>
                 </div>
             </div>

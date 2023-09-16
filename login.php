@@ -24,6 +24,7 @@ if (isset($_SESSION["user"])) {
         body{
             background-image:  url("./images/3.jpg");
             background-size:cover;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
@@ -47,6 +48,9 @@ if (isset($_SESSION["user"])) {
                     $_SESSION["address"] = $user["address"];
                     if (isset($_SESSION["url"])){
                     header("Location: " . $_SESSION['url']);
+                    }
+                    else{
+                        header("Location: index.php");
                     }
                     die();
                 }else{

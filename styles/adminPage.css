@@ -9,4 +9,39 @@ body {
     box-shadow: 5px 5px 15px rgb(3, 121, 113);
     padding: 10px;
     margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.complete_btn{
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius:20px;
+    padding: 5px;
+}
+
+.complete_btn:hover{
+    background-color: rgb(177, 180, 179);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.complete_btn a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.table{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.home{
+    font-weight: bolder;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+}
+.home:hover{
+    background-color: #2ab8c5;
+    
 }
