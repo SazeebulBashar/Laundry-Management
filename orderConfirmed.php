@@ -16,7 +16,7 @@ if (!isset($_SESSION["user"])) {
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/orderConfirmed.css">
-    <title>Laundry MAMA</title>
+    <title>Happy Laundry</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
 </head>
 
