@@ -48,7 +48,7 @@ if (isset($_GET['oid'])){
 
         <?php
         require_once("dbconnection.php");
-        $sql= "SELECT * FROM (running_orders INNER JOIN users on running_orders.user_id = users.id) INNER JOIN services ON service_id = services.s_id order by order_id;";
+        $sql= "SELECT * FROM (running_orders INNER JOIN users on running_orders.user_id = users.id) INNER JOIN services ON service_id = services.s_id order by order_id desc;";
         $result = mysqli_query($conn, $sql);
 
         echo "<table class='table table-striped '>
